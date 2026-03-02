@@ -1,4 +1,4 @@
-et timer = 0;
+let timer = 0;
 let intervalId = null;
 
 // Start Timer
@@ -26,5 +26,6 @@ document.getElementById("resetTimer").onclick = function() {
     timer = 0;
     document.getElementById("timerDisplay").innerHTML = timer;
 };
+
 
 
