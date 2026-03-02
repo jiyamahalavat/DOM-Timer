@@ -10,7 +10,7 @@ startTimer.addEventListener("click", function() {
     if (intervalid === null) {
         intervalid = setInterval(function() {
             seconds++;
-            timerdisplay.textContent = seconds + " seconds";
+            timerDisplay.textContent = seconds + " seconds";
         }, 1000);}
 
 });
@@ -18,7 +18,7 @@ startTimer.addEventListener("click", function() {
 stopTimer.addEventListener("click", function() {
     if (intervalid !== null) {
         clearInterval(intervalid);
-        timeinv = null;
+        intervalid = null;
     }
 });
 
@@ -27,6 +27,7 @@ resetTimer.addEventListener("click", function() {
     seconds = 0;
     timerDisplay.textContent = "0 seconds";
 });
+
 
 
 
