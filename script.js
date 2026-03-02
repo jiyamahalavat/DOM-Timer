@@ -1,33 +1,31 @@
 let seconds = 0;
-let timeinv = null;
+let intervalid = null;
 
-const starttimer = document.getElementById("startTimer");
-const stoptimer = document.getElementById("stopTimer");
-const resettimer = document.getElementById("resetTimer");
-const timerdisplay = document.getElementById("timerDisplay");
+const startTimer = document.getElementById("startTimer");
+const stopTimer = document.getElementById("stopTimer");
+const resetTimer = document.getElementById("resetTimer");
+const timerDisplay = document.getElementById("timerDisplay");
 
-starttimer.addEventListener("click", function() {
-    if (timeinv === null) {
-        timeinv = setInterval(function() {
+startTimer.addEventListener("click", function() {
+    if (intervalid === null) {
+        intervalid = setInterval(function() {
             seconds++;
             timerdisplay.textContent = seconds + " seconds";
         }, 1000);}
 
 });
 
-stoptimer.addEventListener("click", function() {
-    if (timeinv !== null) {
-        clearInterval(timeinv);
+stopTimer.addEventListener("click", function() {
+    if (intervalid !== null) {
+        clearInterval(intervalid);
         timeinv = null;
     }
 });
 
-resettimer.addEventListener("click", function() {    
-    clearInterval(timeinv);
+resetTimer.addEventListener("click", function() {    
+    clearInterval(intervalid);
     seconds = 0;
-    timerdisplay.textContent = "0 seconds";
+    timerDisplay.textContent = "0 seconds";
 });
-
-
 
 
